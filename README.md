@@ -1,2 +1,2 @@
-# Lenguajes_de_Programaci-n
+# Lenguajes de programacion
 Práctica de la asignatura lenguajes de programación
