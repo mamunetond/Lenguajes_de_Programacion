@@ -1,0 +1,7 @@
+W = W
+Bool = Bool
+ch2 = ch2
+(iPu8 -> iPu8) -> kiUn = (Bool -> Bool) -> Nat
+((t3 -> t3) -> t3) -> m4 = ((Nat -> Nat) -> Nat) -> Bool
+(((q5->q5) -> q5) -> q5) -> q5) -> n6 = (((Bool -> Bool) -> Bool) -> Bool) -> Nat
+((((bo -> bo) -> bo) -> bo) -> bo) -> bo) -> v9 = ((((Nat -> Nat) -> Nat) -> Nat) -> Nat) -> Nat) -> Bool

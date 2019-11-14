@@ -1,0 +1,5 @@
+A = A
+Bool -> Bool
+c -> c = Bool -> Bool
+(d -> d) -> f = (Bool -> Bool) -> Bool
+((H -> H) -> H) -> x = ((Nat -> Nat) -> Nat) -> Nat

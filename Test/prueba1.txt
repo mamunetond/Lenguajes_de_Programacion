@@ -1,0 +1,3 @@
+Z = Z
+Bool = Bool
+B -> B = Nat -> Nat

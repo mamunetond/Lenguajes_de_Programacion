@@ -1,0 +1,6 @@
+a = a
+Nat = Nat
+a -> a = Nat -> Nat
+(a -> a) -> b = (Nat -> Nat) -> Nat
+
+
