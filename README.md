@@ -7,7 +7,7 @@
 
 # Descripción general del programa:
 En general, la unificación es el proceso de resolver un conjunto de ecuaciones entre expresiones simbólicas. En este
-laboratorio de programación, las ecuaciones serán ecuaciones de tipo y la expresión simbólica serán expresiones de tipo.
+laboratorio de programación, las ecuaciones serán ecuaciones de tipo y las expresiones simbólicas serán expresiones de tipo.
 La unificación se utiliza, por ejemplo, durante la verificación de tipos o la inferencia de tipos.
 
 Este es un algoritmo basado en el algoritmo de Robinson. Que propone que dado un conjunto de restricciones C. Determina si es posible unificar o no. Si el conjunto de restricciones C, se unifica, el algoritmo retorna la sustitución que unifica el conjunto, de otro modo el algoritmo falla.
