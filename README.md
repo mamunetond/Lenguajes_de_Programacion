@@ -6,7 +6,7 @@
 
 
 # Descripción general del programa:
-En general, la unificación es el proceso de resolver un conjunto de ecuaciones entre expresiones simbólicas. En esto
+En general, la unificación es el proceso de resolver un conjunto de ecuaciones entre expresiones simbólicas. En este
 laboratorio de programación, las ecuaciones serán ecuaciones de tipo y la expresión simbólica serán expresiones de tipo.
 La unificación se utiliza, por ejemplo, durante la verificación de tipos o la inferencia de tipos.
 
