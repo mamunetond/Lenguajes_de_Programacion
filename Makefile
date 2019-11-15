@@ -9,7 +9,9 @@ scanner.o: scanner.cpp scanner.h token.h
 
 token.o: token.cpp token.h
 
+ast.o: ast.h ast.cpp
 
+parser.o: parser.h parser.cpp
 
 clean:
         rm -f *.o
