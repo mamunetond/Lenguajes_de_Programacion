@@ -1,5 +1,5 @@
 #include "parser.h"
-#include "calcex.h"
+#include "excepcion.h"
 #include <string>
 #include <sstream>
 
@@ -37,17 +37,6 @@ AST* Parser::expr() {
 
 AST* Parser::restExpr(AST* e) {
   Token* t = scan->getToken();
-
-  if (t->getType() == add) {
-      return restExpr(new AddNode(e,term()));
-  }
-
-   if (t->getType() == sub)
-      return restExpr(new SubNode(e,term()));
-
-   scan->putBackToken();
-
-   return e;
 }
 
 AST* Parser::term() {
@@ -63,16 +52,6 @@ AST* Parser::restTerm(AST* e) {
    case times:
      result = restTerm(new TimesNode(e, storable()));
      break;
-
-   case divide:
-     result = restTerm(new DivideNode(e, storable()));
-     break;
-      break;
-
-   case module:
-     result = restTerm(new ModuleNode(e, storable()));
-     break;
-
    default:
      scan->putBackToken();
      result = e;
@@ -96,12 +75,6 @@ AST* Parser::memOperation(AST* e) {
     if(t->getLex() == "S") {
       return new StoreNode(result);
     }
-    else if(t->getLex() == "P") {
-      return new PlusNode(result);
-    }
-    else if(t->getLex() == "M") {
-      return new MinusNode(result);
-    }
     else {
       cout << "* parse error" << endl;
       throw ParseError;
@@ -120,13 +93,6 @@ AST* Parser::factor() {
   AST* result;
   Token* t = scan->getToken();
 
-   if (t->getType() == number) {
-      istringstream in(t->getLex());
-      int val;
-      in >> val;
-       return new NumNode(val);
-   }
-
    if (t->getType() == identifier) {
       istringstream in(t->getLex());
       string val;
@@ -134,10 +100,6 @@ AST* Parser::factor() {
       return new IdNode(val);
    }
 
-   if (t->getType() == keyword){
-    if(t->getLex() == "-v") {
-      return InitVar();
-     }
       else if(t->getLex() == "C") {
       return new ClearNode();
     }
@@ -161,18 +123,6 @@ AST* Parser::factor() {
    throw ParseError;
 }
 
-AST* Parser::InitVar() {
-  Token* t = scan->getToken();
-   if(t->getType() == identifier) {
-    Token* to = scan->getToken();
-
-    if(to->getType() == equals)
-      return new InitVarNode(t->getLex(), expr());
-  }
-
-  cout << "* parser error" << endl;
-  throw ParseError;
-}
 
 
 
