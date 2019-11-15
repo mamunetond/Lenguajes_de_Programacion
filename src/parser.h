@@ -19,7 +19,6 @@ class Parser {
    AST* storable();
    AST* memOperation(AST* h);
    AST* factor();
-   AST* InitVar();
 
    Scanner* scan;
 };
