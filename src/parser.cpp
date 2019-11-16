@@ -49,9 +49,6 @@ AST* Parser::restTerm(AST* e) {
    AST* result = nullptr;
 
    switch(t->getType()) {
-   case times:
-     result = restTerm(new TimesNode(e, storable()));
-     break;
    default:
      scan->putBackToken();
      result = e;
