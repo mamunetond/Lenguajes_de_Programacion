@@ -10,7 +10,7 @@ class AST {
    AST();
    virtual ~AST() = 0;
    virtual int evaluate() = 0;
-   virtual string compile() = 0;
+  
 
 };
 
@@ -38,46 +38,6 @@ class UnaryNode : public AST {
    AST* subTree;
 };
 
-class AddNode : public BinaryNode {
- public:
-  AddNode(AST* left, AST* right);
-
-   int evaluate();
-  string compile();
-};
-
-class SubNode : public BinaryNode {
- public:
-   SubNode(AST* left, AST* right);
-
-   int evaluate();
-   string compile();
-};
-
-class TimesNode : public BinaryNode {
- public:
-   TimesNode(AST* left, AST* right);
-
-   int evaluate();
-   string compile();
-};
-
-class DivideNode : public BinaryNode {
- public:
-   DivideNode(AST* left, AST* right);
-
-   int evaluate();
-   string compile();
-   };
-
-class ModuleNode : public BinaryNode {
- public:
-   ModuleNode(AST* left, AST* right);
-
-   int evaluate();
-   string compile();
-
-};
 
 class NumNode : public AST {
 
@@ -143,32 +103,3 @@ public:
   string compile();
 
 };
-
-class PlusNode : public UnaryNode {
-
-public:
-   PlusNode(AST* sub);
-  ~PlusNode();
-  int evaluate();
-  string compile();
-
-};
-
-class MinusNode : public UnaryNode {
-
-public:
-   MinusNode(AST* sub);
-  ~MinusNode();
-
-   int evaluate();
-  string compile();
-  
-  };
-
-
-
-
-
-
-
-
