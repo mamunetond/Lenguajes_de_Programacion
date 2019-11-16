@@ -1,5 +1,5 @@
 #include "scanner.h"
-#include "calcex.h"
+#include "excepcion.h"
 #include <iostream>
 #include <string>
 
@@ -8,11 +8,11 @@ using namespace std;
 //Uncomment this to get debug information
 //#define debug
 
-const int numberOfKeywords = 6;
+const int numberOfKeywords = 8;
 
 const string keywd[numberOfKeywords] = {
-                                        string("S"), string("R"), string("C"), string("P"), string("M"\
-), string("-v"),
+                                        string("S"), string("T"), string("X"), string("Var"\
+), string("->"), string("Nat"), string("Bool"), string("Y")
 };
 
 int isLetter(char c) {
